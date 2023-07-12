@@ -1,5 +1,16 @@
 # SUGO BACKEND
 
+## Servicios
+
+Para el [cumplimiento][ser]: 
+- GET
+- POST
+- DELETE
+
+Para la planeación del servicio: 
+- GET
+- POST
+- DELETE
 
 
 ## Modelado de datos ([relacion de tablas][lucidApp_SUGO])
@@ -12,9 +23,7 @@
 ![Relacion de tablas](./Doc/assets/MER%20SUGO%20servicios.png "assets\MER SUGO servicios.png")
 <center> <i> 1 header tienen muchos servicios </i> </center>
 
-ㅤ
-
-## Rutas
+## Routes
 *Empeza en este orden*
 
 1. cumpli
@@ -28,3 +37,5 @@
 
 
 [lucidApp_SUGO]: https://lucid.app/lucidchart/35b43b0b-0ef7-4755-b7aa-2853da78c7c4/edit?from_internal=true
+
+[ser]: src\readme.md
