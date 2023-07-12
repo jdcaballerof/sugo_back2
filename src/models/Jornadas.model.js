@@ -8,6 +8,7 @@ import { CumpliDesc } from './CumpliDesc.model.js';
         Dentro de esa pagina se encuentra los diferentes Datatypes disponibles (/#data-types)
     (Se importa en index para que cree la tabla)
 */
+// ToDo: Quitar mayusculas a los campos, cambiar a snake_case
 export const Jornadas = SUGO_sequelize_connection.define(
     'jornadas',     // nombre de la tabla
     {

@@ -24,10 +24,12 @@ export const Cumplimiento =  SUGO_sequelize_connection.define(
             type: DataTypes.INTEGER,
         },
         tipo:{
-            type: DataTypes.STRING(25),
+            type: DataTypes.INTEGER,
+            comment: '0: eco, 1: operador'
         },
         serial:{
             type: DataTypes.INTEGER,
+            comment: 'No. de operador o bus'
         },
         fecha:{
             type: DataTypes.DATEONLY,
