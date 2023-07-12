@@ -4,12 +4,12 @@
 
 ## Modelado de datos ([relacion de tablas][lucidApp_SUGO])
 
-![Relacion de tablas](./assets/README/MER%20SUGO%20cumplimiento.png "assets\MER SUGO servicios.png")
+![Relacion de tablas](./Doc/assets/MER%20SUGO%20cumplimiento.png "assets\MER SUGO servicios.png")
 <center> <i> 1 cumplimiento tiene 1 descripcion, 1 desc tiene muchas jornadas </i> </center>
 
 ㅤ
 
-![Relacion de tablas](./assets/README/MER%20SUGO%20servicios.png "assets\MER SUGO servicios.png")
+![Relacion de tablas](./Doc/assets/MER%20SUGO%20servicios.png "assets\MER SUGO servicios.png")
 <center> <i> 1 header tienen muchos servicios </i> </center>
 
 ㅤ
