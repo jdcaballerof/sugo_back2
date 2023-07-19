@@ -1,6 +1,6 @@
 import {DataTypes} from 'sequelize';
-import { SUGO_sequelize_connection } from '../database/sugo.connection.js';
 import { CumpliDesc } from './CumpliDesc.model.js';
+import { SUGO_sequelize_connection } from '../../database/sugo.connection.js';
 
 
 /*

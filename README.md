@@ -1,6 +1,76 @@
 # SUGO BACKEND
 
-## Servicios
+## Modelado de datos ([relacion de tablas][lucidApp_SUGO])
+
+### Cumplimiento
+![Relacion de tablas](./Doc/assets/MER%20SUGO%20cumplimiento.png "assets\MER SUGO servicios.png")
+<center> <i> 1 cumplimiento tiene 1 descripcion, 1 desc tiene muchas jornadas </i> </center>
+
+ㅤ
+### Rol
+![Relacion de tablas](./Doc/assets/MER%20SUGO%20servicios.png "assets\MER SUGO servicios.png")
+<center> <i> 1 header tienen muchos servicios </i> </center>
+
+
+## Project Structure
+```js
+.  
+├── package.json  
+├── requests    (How to use the API: request methods, params, body, etc. )  
+│   ├── projects.http  
+│   └── tasks.http  
+├── sql ( sequelize methods in sql ) *optional  
+│   └── db.sql  
+└── src  
+    ├── app1: Cumplimiento
+    │    ├── models  
+    │    │   ├── Cumpli.model.js  
+    │    │   ├── Cumpli_desc.model.js
+    │    │   └── Desc_jornadas.model.js
+    │    ├── services   
+    │    │   ├── (sequelize) *optional
+    │    │   └── ...
+    │    ├── controllers  
+    │    │   ├── cumplimiento.controller.js  
+    │    │   ├── cumpli.controller.js  
+    │    │   ├── cumpli_desc.controller.js  
+    │    │   └── desc_jornadas.controller.js  
+    │    ├── routes
+    │    │   ├── cumplimiento.routes.js
+    │    │   ├── cumpli.routes.js
+    │    │   ├── cumpli_desc.routes.js
+    │    │   └── desc_jornadas.routes.js
+    │    └── ...
+    │  
+    ├── app2: Rol
+    │    ├── models  
+    │    │   ├── Header.model.js  
+    │    │   └── Servicio.model.js
+    │    ├── services   
+    │    │   ├── (sequelize) *optional  
+    │    │   └── ...
+    │    ├── controllers  
+    │    │   ├── rol.controller.js  
+    │    │   ├── header.controller.js  
+    │    │   └── servicio.controller.js  
+    │    ├── routes
+    │    │   ├── rol.routes.js
+    │    │   ├── header.routes.js
+    │    │   └── servicio.routes.js
+    │    └── ...
+    │  
+    ├── database  
+    │   └── database.js  
+    ├── app.js  
+    └── index.js  
+```
+
+> models, controllers y routes hijos de src son de la app cumplimiento
+
+:joy:
+
+
+## Services
 
 Para el [cumplimiento][ser]: 
 - GET
@@ -11,26 +81,6 @@ Para la planeación del servicio:
 - GET
 - POST
 - DELETE
-
-
-## Modelado de datos ([relacion de tablas][lucidApp_SUGO])
-
-![Relacion de tablas](./Doc/assets/MER%20SUGO%20cumplimiento.png "assets\MER SUGO servicios.png")
-<center> <i> 1 cumplimiento tiene 1 descripcion, 1 desc tiene muchas jornadas </i> </center>
-
-ㅤ
-
-![Relacion de tablas](./Doc/assets/MER%20SUGO%20servicios.png "assets\MER SUGO servicios.png")
-<center> <i> 1 header tienen muchos servicios </i> </center>
-
-## Routes
-*Empeza en este orden*
-
-1. cumpli
-2. cumpli_desc
-3. desc_jornadas
-
-
 
 
 

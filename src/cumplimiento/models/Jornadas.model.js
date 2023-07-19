@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import { SUGO_sequelize_connection } from '../database/sugo.connection.js';
+import { SUGO_sequelize_connection } from '../../database/sugo.connection.js';
 import { CumpliDesc } from './CumpliDesc.model.js';
 
 /*
@@ -32,6 +32,9 @@ export const Jornadas = SUGO_sequelize_connection.define(
         },
         lugFin: {
             type: DataTypes.STRING,
+        },
+        corridas: {
+            type: DataTypes.INTEGER,
         },
         // done:{
         //     type: DataTypes.BOOLEAN,

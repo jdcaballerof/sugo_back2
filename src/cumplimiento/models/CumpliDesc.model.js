@@ -1,5 +1,5 @@
 import {DataTypes} from 'sequelize';
-import { SUGO_sequelize_connection } from '../database/sugo.connection.js';
+import { SUGO_sequelize_connection } from '../../database/sugo.connection.js';
 import { Jornadas } from './Jornadas.model.js';
 import { Cumplimiento } from './Cumpli.model.js';
 

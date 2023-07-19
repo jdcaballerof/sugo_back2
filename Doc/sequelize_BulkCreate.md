@@ -1,7 +1,7 @@
 # [**BulkCreate**][docBulk]
 
 [`Model.bulkCreate`][docBulk] method to allow creating multiple records at once, with only one query **for only one table**.  
-If you need to insert data with one record in multiple tables, it is better to use Create (and for of loop)
+If you need to insert data with one record in multiple tables, it is better to use Create (and for-of loop)
 
 ```js
 const captains = await Captain.bulkCreate([

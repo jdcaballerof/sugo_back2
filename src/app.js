@@ -1,8 +1,7 @@
 import express from 'express'
-import cumpliRoutes from './routes/cumpli.routes.js';
-import cumplimientoRoutes from './routes/cumpli/cumplimiento.routes.js';
-import cumpliDescRoutes from './routes/cumpli/cumpli_desc.routes.js';
-import jornadasRoutes from './routes/cumpli/desc_jornadas.routes.js';
+import cumpliRoutes from './cumplimiento/routes/cumpli.routes.js';
+import rolRoutes from './Rol/routes/rol.routes.js';
+
 
 const app = express()
 
@@ -12,10 +11,11 @@ app.use( express.json() )
 
 //& Rutas
 app.use(cumpliRoutes)
+app.use(rolRoutes)
 
-app.use(cumplimientoRoutes)
-app.use(cumpliDescRoutes)
-app.use(jornadasRoutes)
+// app.use(cumplimientoRoutes)
+// app.use(cumpliDescRoutes)
+// app.use(jornadasRoutes)
 
 
 

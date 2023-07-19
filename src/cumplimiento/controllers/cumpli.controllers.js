@@ -1,8 +1,8 @@
-import { QueryTypes } from "sequelize";
-import { SUGO_sequelize_connection } from "../database/sugo.connection.js";
+import { SUGO_sequelize_connection } from "../../database/sugo.connection.js";
 import { Cumplimiento } from "../models/Cumpli.model.js";
 import { CumpliDesc } from "../models/CumpliDesc.model.js";
 import { Jornadas } from "../models/Jornadas.model.js";
+import { getReporteGeneral } from "../queries_SQL/op_tarjeta.js";
 
 
 
@@ -141,6 +141,21 @@ export const deleteCumplimiento = async(req, res) => {
         res.status(500).json({ error: `Ocurrió un error al eliminar los registros: ${error.message}` });
     }
 
+}
+
+export const repGeneral = async(req, res) => {
+    
+    try {
+        const {mod} = req.params
+        const {fechas} = req.query
+
+        const reporteGnrl = await getReporteGeneral(mod, fechas)
+        
+        res.send({mod, fechas, reporteGnrl})
+    } catch (error) {
+        // console.log(error);
+        return error
+    }
 }
 
 
